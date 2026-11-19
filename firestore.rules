@@ -49,6 +49,8 @@ service cloud.firestore {
         ])
         && request.resource.data.eventId is string
         && request.resource.data.eventId.size() > 0
+        && exists(/databases/$(database)/documents/events/$(request.resource.data.eventId))
+        && request.resource.data.eventTitle == get(/databases/$(database)/documents/events/$(request.resource.data.eventId)).data.title
         && request.resource.data.eventTitle is string
         && request.resource.data.eventTitle.size() <= 160
         && request.resource.data.name is string
