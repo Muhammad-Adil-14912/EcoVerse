@@ -13,7 +13,7 @@ import Partners from './components/Partners';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
-import Admin from './components/Admin';
+import AdminGate from './components/AdminGate';
 import VolunteerSignup from './components/VolunteerSignup';
 import EventSignup from './components/EventSignup';
 
@@ -99,7 +99,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={<AdminGate />} />
         <Route path="/volunteer" element={<VolunteerSignup />} />
         <Route path="/event/:id" element={<EventSignup />} />
       </Routes>
